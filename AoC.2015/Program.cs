@@ -1,8 +1,11 @@
-﻿var dayOne = new DayOne();
+﻿using AoC.Shared;
+
+AoCHttpClient client = new("");
+
+var dayOne = new DayOne(client);
 dayOne.Test();
-dayOne.RunPuzzle();
+await dayOne.RunPuzzle();
 
-var dayTwo = new DayTwo();
+var dayTwo = new DayTwo(client);
 dayTwo.Test();
-dayTwo.RunPuzzle();
-
+await dayTwo.RunPuzzle();
